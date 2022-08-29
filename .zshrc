@@ -16,7 +16,9 @@ eval "$(op completion zsh)"; compdef _op op
 setopt hist_ignore_all_dups
 
 # iTerm2 shell integration
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then
+  source "${HOME}/.iterm2_shell_integration.zsh"
+fi
 
 #
 # Aliases
