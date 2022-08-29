@@ -1,0 +1,5 @@
+/.aws/config
+/.aws/credentials
+/.dotfiles.git
+/.kube/config
+/.Brewfile.lock.json

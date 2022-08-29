@@ -1,0 +1,24 @@
+[user]
+	name = Grzegorz Bernady
+	email = greg@gbernady.com
+	signingkey = CD23A2CD
+	useConfigOnly = true
+[core]
+	excludesfile = ~/.gitignore_global
+[init]
+	defaultBranch = main
+[color]
+	ui = true
+[commit]
+	gpgsign = true
+	verbose = true
+[push]
+	default = simple
+[status]
+	showStash = true
+[credential]
+	helper = osxkeychain
+[url "ssh://git@codeberg.org/"]
+	insteadOf = https://codeberg.org/
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
