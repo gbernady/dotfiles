@@ -10,7 +10,9 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 # Enable 1Password CLI Zsh completions
-eval "$(op completion zsh)"; compdef _op op
+if (( $+commands[op] )); then
+  eval "$(op completion zsh)"; compdef _op op
+fi
 
 # Zsh history deduplication
 setopt hist_ignore_all_dups
