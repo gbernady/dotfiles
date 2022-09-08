@@ -9,6 +9,13 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
+# Disable system-level git config, because it loads the osxkeychain credential helper
+export GIT_CONFIG_NOSYSTEM=1
+
+# Go
+export GOPRIVATE="github.com/gbernady"
+
+# Rust
 if [[ -s "${HOME}/.cargo/env" ]]; then
   source "${HOME}/.cargo/env"
 fi

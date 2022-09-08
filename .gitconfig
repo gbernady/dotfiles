@@ -17,8 +17,4 @@
 [status]
 	showStash = true
 [credential]
-	helper = osxkeychain
-[url "ssh://git@codeberg.org/"]
-	insteadOf = https://codeberg.org/
-[url "ssh://git@github.com/"]
-	insteadOf = https://github.com/
+	helper = op
