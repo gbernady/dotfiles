@@ -6,10 +6,10 @@ I track my dotfiles in a bare git repository ([ref](https://www.google.com/searc
 
 ```zsh
 git clone --bare git@github.com:gbernady/dotfiles.git ~/.dotfiles.git
-alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
-dotfiles config --local status.showUntrackedFiles no
-dotfiles checkout
-dotfiles submodule update --init --recursive
+alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+dtf config --local status.showUntrackedFiles no
+dtf checkout
+dtf submodule update --init --recursive
 ```
 
 ## License

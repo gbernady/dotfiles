@@ -27,7 +27,7 @@ fi
 #
 
 # Dotfiles
-alias dotfiles='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
+alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 # Git
 alias gcaa="gca --amend"
