@@ -51,7 +51,6 @@ brew "teamookla/speedtest/speedtest"
 
 cask "1password-cli"
 cask "affinity-publisher"
-cask "calibre"
 cask "charles"
 cask "coconutbattery"
 cask "daisydisk"
