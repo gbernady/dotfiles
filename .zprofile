@@ -48,6 +48,7 @@ cdpath=(
 
 # Set the list of directories that Zsh searches for function definitions.
 fpath=(
+  $HOME/.cache/site-functions
   /opt/{homebrew,local}/share/zsh/site-functions(N)
   $fpath
 )

@@ -4,14 +4,25 @@
 # Based on https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zshrc
 #
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# Cache custom completions if needed to allow them being picked up by zcompile
+sitefuncs="${XDG_CACHE_HOME:-$HOME/.cache}/site-functions"
+if [[ ! -d "$sitefuncs" ]]; then
+  mkdir -p "$sitefuncs"
+
+  if (( $+commands[op] )); then
+    op completion zsh >! "${sitefuncs}/_op"
+  fi
+
+  if (( $+commands[rustup] )); then
+    rustup completions zsh rustup >! "${sitefuncs}/_rustup"
+    rustup completions zsh cargo >! "${sitefuncs}/_cargo"
+  fi
+
 fi
 
-# Enable 1Password CLI Zsh completions
-if (( $+commands[op] )); then
-  eval "$(op completion zsh)"; compdef _op op
+# Source Prezto
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Zsh history deduplication
