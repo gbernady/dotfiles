@@ -1,0 +1,24 @@
+[submodule "/Users/greg/.vim/pack/gbernady/start/vim-go"]
+	path = /Users/greg/.vim/pack/gbernady/start/vim-go
+	url = https://github.com/fatih/vim-go.git
+[submodule ".vim/pack/gbernady/opt/sleuth"]
+	path = .vim/pack/gbernady/opt/sleuth
+	url = https://tpope.io/vim/sleuth.git
+[submodule ".vim/pack/gbernady/opt/ayu-vim"]
+	path = .vim/pack/gbernady/opt/ayu-vim
+	url = https://github.com/Luxed/ayu-vim
+[submodule ".vim/pack/gbernady/start/vim-sensible"]
+	path = .vim/pack/gbernady/start/vim-sensible
+	url = https://github.com/tpope/vim-sensible
+[submodule ".vim/pack/gbernady/start/vim-unimpaired"]
+	path = .vim/pack/gbernady/start/vim-unimpaired
+	url = https://github.com/tpope/vim-unimpaired
+[submodule ".vim/pack/gbernady/start/vim-toml"]
+	path = .vim/pack/gbernady/start/vim-toml
+	url = https://github.com/cespare/vim-toml
+[submodule ".vim/pack/gbernady/start/rust.vim"]
+	path = .vim/pack/gbernady/start/rust.vim
+	url = https://github.com/rust-lang/rust.vim
+[submodule ".vim/pack/gbernady/start/vim-terraform"]
+	path = .vim/pack/gbernady/start/vim-terraform
+	url = https://github.com/hashivim/vim-terraform.git
