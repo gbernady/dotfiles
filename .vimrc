@@ -5,9 +5,11 @@ set termguicolors
 
 packadd ayu-vim
 set background=dark
-let g:ayucolor="mirage"
+"let g:ayucolor="mirage"
+let g:ayucolor="dark"
 colorscheme ayu
-highlight SignColumn guibg=#242936
+"highlight SignColumn guibg=#242936
+highlight SignColumn guibg=#0d1017
 
 set expandtab
 set hlsearch
