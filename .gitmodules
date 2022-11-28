@@ -1,5 +1,5 @@
-[submodule "/Users/greg/.vim/pack/gbernady/start/vim-go"]
-	path = /Users/greg/.vim/pack/gbernady/start/vim-go
+[submodule ".vim/pack/gbernady/start/vim-go"]
+	path = .vim/pack/gbernady/start/vim-go
 	url = https://github.com/fatih/vim-go.git
 [submodule ".vim/pack/gbernady/opt/sleuth"]
 	path = .vim/pack/gbernady/opt/sleuth
