@@ -35,6 +35,7 @@ brew "kubeseal"
 brew "kustomize"
 brew "linkerd"
 brew "make"
+brew "mas"
 brew "nmap"
 brew "podman"
 brew "rustup-init"
@@ -92,3 +93,20 @@ cask "yubico-yubikey-manager"
 cask "zoom"
 cask "homebrew/cask-drivers/sony-ps-remote-play"
 cask "homebrew/cask-versions/iterm2-beta"
+
+mas "1Blocker", id: 1365531024
+mas "1Password for Safari", id: 1569813296
+mas "Apple Configurator", id: 1037126344
+mas "Developer", id: 640199958
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Parcel", id: 639968404
+mas "Poolsuite FM", id: 1514817810
+mas "Reeder", id: 1529448980
+mas "TestFlight", id: 899247664
+mas "Tonebridge Guitar Effects", id: 1263858588
+mas "Ultimate Guitar - Chords & Tabs", id: 1479045460
+mas "Xcode", id: 497799835
