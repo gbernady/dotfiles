@@ -3,7 +3,7 @@
 	url = https://github.com/fatih/vim-go.git
 [submodule ".vim/pack/gbernady/opt/sleuth"]
 	path = .vim/pack/gbernady/opt/sleuth
-	url = https://tpope.io/vim/sleuth.git
+	url = https://github.com/tpope/vim-sleuth.git
 [submodule ".vim/pack/gbernady/opt/ayu-vim"]
 	path = .vim/pack/gbernady/opt/ayu-vim
 	url = https://github.com/Luxed/ayu-vim
