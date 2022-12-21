@@ -22,3 +22,9 @@
 [submodule ".vim/pack/gbernady/start/vim-terraform"]
 	path = .vim/pack/gbernady/start/vim-terraform
 	url = https://github.com/hashivim/vim-terraform.git
+[submodule ".vim/pack/gbernady/start/vim-fugitive"]
+	path = .vim/pack/gbernady/start/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive.git
+[submodule ".vim/pack/gbernady/start/nerdcommenter"]
+	path = .vim/pack/gbernady/start/nerdcommenter
+	url = https://github.com/preservim/nerdcommenter.git
