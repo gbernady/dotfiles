@@ -15,6 +15,7 @@ set numberwidth=4
 set shiftwidth=4
 set signcolumn=yes
 set updatetime=100
+set mouse=a
 
 packadd sleuth
 
