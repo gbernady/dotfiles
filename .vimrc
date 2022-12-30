@@ -8,7 +8,6 @@ set background=dark
 let g:ayucolor="dark"
 colorscheme ayu
 
-set completeopt=longest,menuone
 set expandtab
 set hlsearch
 set mouse=a
@@ -16,6 +15,7 @@ set number
 set numberwidth=4
 set shiftwidth=4
 set signcolumn=yes
+set tabstop=4
 set updatetime=100
 
 packadd sleuth
