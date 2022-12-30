@@ -9,6 +9,8 @@ tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "teamookla/speedtest"
 
+brew "ansible"
+brew "ansible-lint"
 brew "aria2"
 brew "awscli"
 brew "checkov"
