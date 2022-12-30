@@ -27,6 +27,16 @@ if executable('rustup')
         \   'name': 'Rust Language Server',
         \   'cmd': {server_info->['rustup', 'run', 'stable', 'rust-analyzer']},
         \   'whitelist': ['rust'],
+        \   'initialization_options': {
+        \     'cargo': {
+        \       'buildScripts': {
+        \         'enable': v:true,
+        \       },
+        \     },
+        \     'procMacro': {
+        \       'enable': v:true,
+        \     },
+        \   },
         \ })
 endif
 
