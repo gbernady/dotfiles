@@ -28,3 +28,6 @@
 [submodule ".vim/pack/gbernady/start/nerdcommenter"]
 	path = .vim/pack/gbernady/start/nerdcommenter
 	url = https://github.com/preservim/nerdcommenter.git
+[submodule ".vim/pack/gbernady/start/vim-lsp"]
+	path = .vim/pack/gbernady/start/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
