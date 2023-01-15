@@ -49,7 +49,7 @@ alias gWR='git worktree remove -f'
 alias gWp='git worktree prune'
 
 # GPG
-alias gpg-learn='gpg-connect-agent "scd serialno" "learn --force" /bye'
+alias gpg-relearn='gpg-connect-agent "scd serialno" "learn --force" /bye'
 
 # Kubernetes
 alias k=kubectl
