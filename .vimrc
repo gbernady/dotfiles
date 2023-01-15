@@ -8,6 +8,8 @@ set background=dark
 let g:ayucolor="dark"
 colorscheme ayu
 
+let g:is_posix = 1
+
 set expandtab
 set hlsearch
 set mouse=a
@@ -20,8 +22,8 @@ set updatetime=100
 
 packadd sleuth
 
-:highlight ExtraWhitespace ctermbg=darkred guibg=darkred
-:match ExtraWhitespace /\s\+$/
+highlight ExtraWhitespace ctermbg=darkred guibg=darkred
+match ExtraWhitespace /\s\+$/
 
 function! CleverTab()
     if pumvisible()
