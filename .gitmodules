@@ -31,3 +31,6 @@
 [submodule ".vim/pack/gbernady/start/vim-commentary"]
 	path = .vim/pack/gbernady/start/vim-commentary
 	url = https://github.com/tpope/vim-commentary.git
+[submodule ".vim/pack/gbernady/start/vim-gitgutter"]
+	path = .vim/pack/gbernady/start/vim-gitgutter
+	url = https://github.com/airblade/vim-gitgutter.git
