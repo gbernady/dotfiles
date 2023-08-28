@@ -34,4 +34,41 @@ fi
 # set up macOS defaults
 # https://github.com/pawelgrzybek/dotfiles/blob/master/setup-macos.sh
 
+# System Preferences > General > Language & Region
+defaults write ".GlobalPreferences_m" AppleLanguages -array en-PL pl-PL
+defaults write -globalDomain AppleLanguages -array en-PL pl-PL
+
+# System Preferences > Appearance
+defaults write -globalDomain AppleInterfaceStyleSwitchesAutomatically -bool true
+
+# System Preferences > Control Centre
+defaults write "com.apple.airplay" showInMenuBarIfPresent -bool false
+defaults write "com.apple.airplay" "NSStatusItem Visible NowPlaying" -bool false
+defaults -currentHost write com.apple.Spotlight MenuItemHidden -int 1
+defaults write com.apple.Siri SiriPrefStashedStatusMenuVisible -bool false
+
+# System Preferences > Desktop & Dock
+defaults write com.apple.dock autohide -bool true
+defaults write com.apple.dock magnification -bool false
+defaults write com.apple.dock tilesize -int 48
+defaults write com.apple.dock mru-spaces -bool false
+
+# System Preferences > Lock Screen
+defaults -currentHost write com.apple.screensaver idleTime -int 0
+
+# System Preferences > Keyboard
+defaults write -globalDomain KeyRepeat -int 5
+defaults write -globalDomain InitialKeyRepeat -int 30
+
+# System Preferences > Trackpad
+defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
+
+# Finder > Preferences
+defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+
+for app in "Dock" "Finder"; do
+	killall "${app}" > /dev/null 2>&1
+done
+
 echo "Done. Note that some changes require a logout/restart to take effect."
