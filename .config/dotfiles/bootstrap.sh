@@ -52,6 +52,7 @@ defaults write com.apple.dock autohide -bool true
 defaults write com.apple.dock magnification -bool false
 defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock mru-spaces -bool false
+# defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$myapp</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 
 # System Preferences > Lock Screen
 defaults -currentHost write com.apple.screensaver idleTime -int 0
@@ -65,7 +66,10 @@ defaults write com.apple.AppleMultitouchTrackpad TrackpadThreeFingerHorizSwipeGe
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad TrackpadThreeFingerHorizSwipeGesture -int 2
 
 # Finder > Preferences
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
+defaults write com.apple.finder FXLastSearchScope "SCcf"
+defaults write com.apple.finder FXPreferredSearchViewStyle -string "clmv"
+defaults write com.apple.finder FXPreferredViewStyle -string "clmv"
+# defaults write com.apple.finder DesktopViewSettings "" # GroupBy = Kind; IconViewSettings/arrangeBy = dateAdded
 
 for app in "Dock" "Finder"; do
 	killall "${app}" > /dev/null 2>&1
