@@ -4,8 +4,7 @@ syntax enable
 set termguicolors
 
 packadd ayu-vim
-set background=dark
-let g:ayucolor="dark"
+packadd vim-lumen
 colorscheme ayu
 
 let g:is_posix = 1

@@ -34,3 +34,6 @@
 [submodule ".vim/pack/gbernady/start/vim-gitgutter"]
 	path = .vim/pack/gbernady/start/vim-gitgutter
 	url = https://github.com/airblade/vim-gitgutter.git
+[submodule ".vim/pack/gbernady/opt/vim-lumen"]
+	path = .vim/pack/gbernady/opt/vim-lumen
+	url = https://github.com/vimpostor/vim-lumen.git
