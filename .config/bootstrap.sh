@@ -56,6 +56,7 @@ defaults write com.apple.dock tilesize -int 48
 defaults write com.apple.dock mru-spaces -bool false
 # defaults write com.apple.dock persistent-apps -array-add "<dict><key>tile-data</key><dict><key>file-data</key><dict><key>_CFURLString</key><string>$myapp</string><key>_CFURLStringType</key><integer>0</integer></dict></dict></dict>"
 defaults write com.apple.widgets widgetAppearance 0
+defaults write com.apple.WindowManager EnableStandardClickToShowDesktop false
 
 # System Preferences > Lock Screen
 defaults -currentHost write com.apple.screensaver idleTime -int 0
