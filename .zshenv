@@ -16,7 +16,7 @@ export GIT_CONFIG_NOSYSTEM=1
 export GOPRIVATE="github.com/gbernady"
 
 # KeePassXC
-export KPXC_CONFIG="${HOME}/.config/keepassxc.ini"
+export KPXC_CONFIG="${HOME}/.config/keepassxc/keepassxc.ini"
 
 # Rust
 if [[ -s "${HOME}/.cargo/env" ]]; then
