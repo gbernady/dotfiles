@@ -23,3 +23,6 @@ if [[ -o INTERACTIVE && -t 2 ]]; then
   fi
 
 fi >&2
+
+launchctl setenv KPXC_CONFIG "${KPXC_CONFIG}"
+
