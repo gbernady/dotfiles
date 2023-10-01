@@ -11,7 +11,7 @@ let g:is_posix = 1
 
 set expandtab
 set hlsearch
-"set mouse=a
+set mouse=a
 set number
 set numberwidth=4
 set shiftwidth=4
