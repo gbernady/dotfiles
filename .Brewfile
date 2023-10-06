@@ -61,7 +61,6 @@ cask "keka"
 cask "little-snitch"
 cask "openttd"
 cask "podman-desktop"
-cask "rapidapi"
 cask "raspberry-pi-imager"
 cask "signal"
 cask "slack"
@@ -76,8 +75,7 @@ cask "zoom"
 cask "sony-ps-remote-play"
 cask "homebrew/cask-versions/iterm2-beta"
 
-mas "1Blocker", id: 1365531024
-mas "1Password for Safari", id: 1569813296
+mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
@@ -89,8 +87,6 @@ mas "Parcel", id: 639968404
 mas "Poolsuite FM", id: 1514817810
 mas "Reeder", id: 1529448980
 mas "TestFlight", id: 899247664
-mas "Tonebridge Guitar Effects", id: 1263858588
-mas "Ultimate Guitar - Chords & Tabs", id: 1479045460
 mas "Xcode", id: 497799835
 
 vscode "DavidAnson.vscode-markdownlint"
