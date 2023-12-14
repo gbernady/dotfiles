@@ -83,7 +83,6 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Parcel", id: 639968404
 mas "Poolsuite FM", id: 1514817810
 mas "Reeder", id: 1529448980
 mas "TestFlight", id: 899247664
