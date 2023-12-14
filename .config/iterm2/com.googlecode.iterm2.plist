@@ -4,6 +4,10 @@
 <dict>
 	<key>AdjustWindowForFontSizeChange</key>
 	<true/>
+	<key>AiMaxTokens</key>
+	<integer>4096</integer>
+	<key>AiModel</key>
+	<string>gpt-3.5-turbo</string>
 	<key>AllowClipboardAccess</key>
 	<false/>
 	<key>AnimateDimming</key>
@@ -2511,6 +2515,8 @@
 	<true/>
 	<key>DisableMetalWhenIdle</key>
 	<true/>
+	<key>DoubleClickTabToEdit</key>
+	<true/>
 	<key>EnableRendezvous</key>
 	<false/>
 	<key>EnterCopyModeAutomatically</key>
@@ -4552,6 +4558,8 @@
 	<real>0.40010516826923082</real>
 	<key>StatusBarPosition</key>
 	<integer>1</integer>
+	<key>StretchTabsToFillBar</key>
+	<true/>
 	<key>SwitchTabModifier</key>
 	<integer>4</integer>
 	<key>SwitchWindowModifier</key>
