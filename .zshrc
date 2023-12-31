@@ -33,6 +33,9 @@ if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then
   source "${HOME}/.iterm2_shell_integration.zsh"
 fi
 
+# Secretive ssh agent
+export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
+
 #
 # Aliases
 #

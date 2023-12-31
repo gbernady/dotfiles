@@ -1,20 +1,24 @@
 [user]
 	name = Grzegorz Bernady
-	email = greg@gbernady.com
-	signingkey = CD23A2CD
+	email = me@gbernady.com
+	signingkey = ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/b3ab552d59287d302c3bf9d6134731b6.pub
 	useConfigOnly = true
 [core]
 	excludesfile = ~/.gitignore_global
 [init]
 	defaultBranch = main
-[color]
-	ui = true
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = ~/.ssh/allowed_signers
 [commit]
 	gpgsign = true
 	verbose = true
+[tag]
+	gpgsign = true
 [push]
 	default = simple
+[color]
+	ui = true
 [status]
 	showStash = true
-[credential]
-	helper = op
