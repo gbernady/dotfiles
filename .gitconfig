@@ -1,7 +1,7 @@
 [user]
 	name = Grzegorz Bernady
 	email = me@gbernady.com
-	signingkey = ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/b3ab552d59287d302c3bf9d6134731b6.pub
+	signingkey = ~/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/3796bf864b70eecef1bc6cb0946782cd.pub
 	useConfigOnly = true
 [core]
 	excludesfile = ~/.gitignore_global

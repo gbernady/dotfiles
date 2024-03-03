@@ -40,6 +40,8 @@ export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.Secret
 # Aliases
 #
 
+alias diff='diff -W $(( $(tput cols) - 2 ))'
+
 # Dotfiles
 alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 

@@ -10,7 +10,7 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
 fi
 
 # Disable system-level git config, because it loads the osxkeychain credential helper
-export GIT_CONFIG_NOSYSTEM=1
+#export GIT_CONFIG_NOSYSTEM=1
 
 # Go
 export GOPRIVATE="github.com/gbernady"
