@@ -90,6 +90,8 @@ mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
 
 vscode "DavidAnson.vscode-markdownlint"
+vscode "github.copilot"
+vscode "github.vscode-github-actions"
 vscode "golang.go"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-kubernetes-tools.vscode-kubernetes-tools"
