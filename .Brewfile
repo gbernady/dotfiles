@@ -47,7 +47,7 @@ cask "coconutbattery"
 cask "daisydisk"
 cask "dash"
 cask "discord"
-cask "firefox-developer-edition"
+cask "firefox@developer-edition"
 cask "font-open-sans"
 cask "font-source-code-pro"
 cask "font-source-sans-pro"
@@ -74,7 +74,7 @@ cask "xld"
 cask "yubico-yubikey-manager"
 cask "zoom"
 cask "sony-ps-remote-play"
-cask "homebrew/cask-versions/iterm2-beta"
+cask "homebrew/cask-versions/iterm2@beta"
 
 mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
