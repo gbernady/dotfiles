@@ -2,8 +2,6 @@ tap "1password/tap"
 tap "fluxcd/tap"
 tap "gbernady/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 
 brew "aria2"
 brew "clamav"
@@ -74,7 +72,7 @@ cask "xld"
 cask "yubico-yubikey-manager"
 cask "zoom"
 cask "sony-ps-remote-play"
-cask "homebrew/cask-versions/iterm2@beta"
+cask "iterm2@beta"
 
 mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
