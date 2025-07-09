@@ -55,9 +55,10 @@ fpath=(
 
 # Set the list of directories that Zsh searches for programs.
 path=(
-  $HOME/.cargo/bin
-  $HOME/go/bin
   $HOME/{,s}bin(N)
+  $HOME/.cargo/bin(N)
+  $HOME/.local/bin(N)
+  $HOME/go/bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
   /usr/local/{,s}bin(N)
   $path
