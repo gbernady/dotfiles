@@ -62,8 +62,6 @@ cask "steam"
 cask "transmission"
 cask "utm"
 cask "visual-studio-code"
-cask "xld"
-cask "yubico-yubikey-manager"
 cask "zen"
 cask "zoom"
 
