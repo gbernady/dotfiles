@@ -145,6 +145,9 @@ unset key
 # Other stuff
 # ------------------------------
 
+# KeepassXC config
+launchctl setenv KPXC_CONFIG "${KPXC_CONFIG}"
+
 # Secretive ssh agent
 export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
 
