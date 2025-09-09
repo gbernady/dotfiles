@@ -160,15 +160,8 @@ alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 # Git
 alias gcaa="gca --amend"
 
-# GPG
-# alias gpg-relearn='gpg-connect-agent "scd serialno" "learn --force" /bye'
-
 # Kubernetes
 alias k=kubectl
-
-# Ruby fixup for Zsh
-# alias bundle='noglob bundle'
-# alias rake='noglob rake'
 
 # Tools
 alias rot13='(){ echo $1 | tr "A-Za-z" "N-ZA-Mn-za-m" ;}'
