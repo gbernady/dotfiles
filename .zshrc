@@ -1,7 +1,36 @@
 #
-# Executes commands at the start of an interactive session.
+# User configuration sourced by interactive shells
 #
-# Based on https://github.com/sorin-ionescu/prezto/blob/master/runcoms/zshrc
+
+# -----------------
+# Zsh configuration
+# -----------------
+
+#
+# History
+#
+
+# Remove older command from the history if a duplicate is to be added.
+setopt HIST_IGNORE_ALL_DUPS
+
+#
+# Input/output
+#
+
+# Set editor default keymap to emacs (`-e`) or vi (`-v`)
+bindkey -e
+
+# Prompt for spelling correction of commands.
+#setopt CORRECT
+
+# Customize spelling correction prompt.
+#SPROMPT='zsh: correct %F{red}%R%f to %F{green}%r%f [nyae]? '
+
+# Remove path separator from WORDCHARS.
+WORDCHARS=${WORDCHARS//[\/]}
+
+#
+# Completions
 #
 
 # Cache custom completions if needed to allow them being picked up by zcompile
@@ -9,29 +38,112 @@ sitefuncs="${XDG_CACHE_HOME:-$HOME/.cache}/site-functions"
 if [[ ! -d "$sitefuncs" ]]; then
   mkdir -p "$sitefuncs"
 
-  if (( $+commands[op] )); then
-    op completion zsh >! "${sitefuncs}/_op"
-  fi
-
   if (( $+commands[rustup] )); then
     rustup completions zsh rustup >! "${sitefuncs}/_rustup"
     rustup completions zsh cargo >! "${sitefuncs}/_cargo"
   fi
-
 fi
 
-# Source Prezto
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# -----------------
+# Zim configuration
+# -----------------
 
-# Zsh history deduplication
-setopt hist_ignore_all_dups
+# Use degit instead of git as the default tool to install and update modules.
+#zstyle ':zim:zmodule' use 'degit'
 
-# iTerm2 shell integration
-if [[ -s "${HOME}/.iterm2_shell_integration.zsh" ]]; then
-  source "${HOME}/.iterm2_shell_integration.zsh"
+# --------------------
+# Module configuration
+# --------------------
+
+#
+# git
+#
+
+# Set a custom prefix for the generated aliases. The default prefix is 'G'.
+zstyle ':zim:git' aliases-prefix 'g'
+
+#
+# input
+#
+
+# Append `../` to your input for each `.` you type after an initial `..`
+#zstyle ':zim:input' double-dot-expand yesb
+
+#
+# termtitle
+#
+
+# Set a custom terminal title format using prompt expansion escape sequences.
+# See http://zsh.sourceforge.net/Doc/Release/Prompt-Expansion.html#Simple-Prompt-Escapes
+# If none is provided, the default '%n@%m: %~' is used.
+#zstyle ':zim:termtitle' format '%1~'
+
+#
+# zsh-autosuggestions
+#
+
+# Disable automatic widget re-binding on each precmd. This can be set when
+# zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+
+# Customize the style that the suggestions are shown with.
+# See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
+
+#
+# zsh-syntax-highlighting
+#
+
+# Set what highlighters will be used.
+# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters.md
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# Customize the main highlighter styles.
+# See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
+#typeset -A ZSH_HIGHLIGHT_STYLES
+#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
+
+# ------------------
+# Initialize modules
+# ------------------
+
+ZIM_HOME=${ZDOTDIR:-${HOME}}/.zim
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  if (( ${+commands[curl]} )); then
+    curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  else
+    mkdir -p ${ZIM_HOME} && wget -nv -O ${ZIM_HOME}/zimfw.zsh \
+        https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+  fi
 fi
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZIM_CONFIG_FILE:-${ZDOTDIR:-${HOME}}/.zimrc} ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init
+fi
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
+
+# ------------------------------
+# Post-init module configuration
+# ------------------------------
+
+#
+# zsh-history-substring-search
+#
+
+zmodload -F zsh/terminfo +p:terminfo
+# Bind ^[[A/^[[B manually so up/down works both before and after zle-line-init
+for key ('^[[A' '^P' ${terminfo[kcuu1]}) bindkey ${key} history-substring-search-up
+for key ('^[[B' '^N' ${terminfo[kcud1]}) bindkey ${key} history-substring-search-down
+for key ('k') bindkey -M vicmd ${key} history-substring-search-up
+for key ('j') bindkey -M vicmd ${key} history-substring-search-down
+unset key
+
+# ------------------------------
+# Other stuff
+# ------------------------------
 
 # Secretive ssh agent
 export SSH_AUTH_SOCK="${HOME}/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/socket.ssh"
@@ -47,21 +159,16 @@ alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
 # Git
 alias gcaa="gca --amend"
-alias gWa='git worktree add'
-alias gWl='git worktree list'
-alias gWr='git worktree remove'
-alias gWR='git worktree remove -f'
-alias gWp='git worktree prune'
 
 # GPG
-alias gpg-relearn='gpg-connect-agent "scd serialno" "learn --force" /bye'
+# alias gpg-relearn='gpg-connect-agent "scd serialno" "learn --force" /bye'
 
 # Kubernetes
 alias k=kubectl
 
 # Ruby fixup for Zsh
-alias bundle='noglob bundle'
-alias rake='noglob rake'
+# alias bundle='noglob bundle'
+# alias rake='noglob rake'
 
 # Tools
 alias rot13='(){ echo $1 | tr "A-Za-z" "N-ZA-Mn-za-m" ;}'
