@@ -7,13 +7,19 @@ if [[ ( "$SHLVL" -eq 1 && ! -o LOGIN ) && -s "${ZDOTDIR:-$HOME}/.zprofile" ]]; t
   source "${ZDOTDIR:-$HOME}/.zprofile"
 fi
 
-# Go
+#
+# Golang
+#
 export GOPRIVATE="github.com/gbernady"
 
+#
 # KeePassXC
+#
 export KPXC_CONFIG="${HOME}/.config/keepassxc/keepassxc.ini"
 
+#
 # Rust
+#
 if [[ -s "${HOME}/.cargo/env" ]]; then
   source "${HOME}/.cargo/env"
 fi

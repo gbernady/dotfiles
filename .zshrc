@@ -160,9 +160,6 @@ alias diff='diff -W $(( $(tput cols) - 2 ))'
 # Dotfiles
 alias dtf='git --git-dir=$HOME/.dotfiles.git --work-tree=$HOME'
 
-# Git
-alias gcaa="gca --amend"
-
 # Kubernetes
 alias k=kubectl
 
