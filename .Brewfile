@@ -37,7 +37,6 @@ cask "affinity-publisher"
 cask "charles"
 cask "coconutbattery"
 cask "daisydisk"
-cask "dash"
 cask "discord"
 cask "docker-desktop"
 cask "firefox@developer-edition"
@@ -47,7 +46,6 @@ cask "font-source-sans-pro"
 cask "freecad"
 cask "ghostty"
 cask "iina"
-cask "iterm2@beta"
 cask "keepassxc"
 cask "keka"
 cask "little-snitch"
@@ -65,7 +63,6 @@ cask "visual-studio-code"
 cask "zen"
 cask "zoom"
 
-mas "AdGuard for Safari", id: 1440147259
 mas "Apple Configurator", id: 1037126344
 mas "Developer", id: 640199958
 mas "GarageBand", id: 682658836
@@ -73,7 +70,6 @@ mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Poolsuite FM", id: 1514817810
 mas "Reeder", id: 1529448980
 mas "TestFlight", id: 899247664
 mas "Xcode", id: 497799835
