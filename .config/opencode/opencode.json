@@ -1,6 +1,10 @@
 {
   "$schema": "https://opencode.ai/config.json",
   "theme": "ayu-system",
-  "provider": {
+  "permission": {
+    "read": {
+      "*.env": "deny",
+      "*.vault_pass": "deny"
+    }
   }
 }
