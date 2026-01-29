@@ -62,15 +62,13 @@ cask "visual-studio-code"
 cask "zen"
 cask "zoom"
 
-mas "Apple Configurator", id: 1037126344
 mas "Developer", id: 640199958
+mas "Discovery", id: 1381004916
 mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Reeder", id: 1529448980
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
 mas "TestFlight", id: 899247664
+max "Wipr", id: 1662217862
 mas "Xcode", id: 497799835
 
 vscode "DavidAnson.vscode-markdownlint"
