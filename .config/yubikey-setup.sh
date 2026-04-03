@@ -1,6 +1,11 @@
-#!/bin/sh
+#!/bin/zsh
 
-pin="$(op read 'op://Personal/Yubikey/password')"
+read -s "pin?Enter new YubiKey PIN: "
+echo
+read -s "pin_confirm?Confirm new YubiKey PIN: "
+echo
+
+[[ "$pin" == "$pin_confirm" ]] || { echo "PINs do not match"; exit 1; }
 
 ykman info
 
@@ -21,45 +26,4 @@ ykman openpgp access change-admin-pin --admin-pin 12345678 --new-admin-pin "${pi
 # ykman openpgp keys set-touch enc on -f --admin-pin "${pin}"
 # ykman openpgp keys set-touch sig on -f --admin-pin "${pin}"
 
-gpgkeyid="$(op read 'op://Personal/GPG Key/keyid')"
-gpgpass="$(op read 'op://Personal/GPG Key/password')"
-
-op read -o "$GNUPGHOME/key" "op://Personal/GPG Key/add more/$gpgkeyid.master.key"
-gpg --pinentry-mode loopback --import "$GNUPGHOME/key" <<END
-${gpgpass}
-END
-rm -f "$GNUPGHOME/key"
-
-gpg --command-fd=0 --status-fd=1 --pinentry-mode loopback --edit-card <<END
-admin
-name
-Bernady
-Grzegorz
-${pin}
-lang
-en
-quit
-END
-
-gpg --command-fd=0 --status-fd=1 --pinentry-mode loopback --edit-key "${gpgkeyid}" <<END
-key 1
-keytocard
-1
-${gpgpass}
-${pin}
-key 1
-key 2
-keytocard
-2
-${gpgpass}
-${pin}
-key 2
-key 3
-keytocard
-3
-${gpgpass}
-${pin}
-key 3
-save
-END
-
+unset pin pin_confirm
