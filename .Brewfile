@@ -63,7 +63,8 @@ cask "visual-studio-code"
 cask "zen"
 cask "zoom"
 
-mas "Developer", id: 640199958
+mas "Current", id: 6758530974
+mas "Developer", id: 640199960
 mas "Discovery", id: 1381004916
 mas "GarageBand", id: 682658836
 mas "Numbers", id: 361304891
