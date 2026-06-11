@@ -58,6 +58,7 @@ path=(
   $HOME/.local/bin(N)
   $HOME/go/bin(N)
   /opt/{homebrew,local}/{,s}bin(N)
+  /opt/{homebrew,local}/opt/rustup/bin
   /usr/local/{,s}bin(N)
   $path
 )

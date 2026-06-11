@@ -30,6 +30,7 @@ brew "wget"
 brew "yamllint"
 brew "ykman"
 brew "zig"
+brew "zls"
 brew "fluxcd/tap/flux"
 
 cask "charles"
