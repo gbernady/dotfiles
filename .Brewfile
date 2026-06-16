@@ -56,6 +56,7 @@ cask "sony-ps-remote-play"
 cask "steam"
 cask "transmission"
 cask "utm"
+cask "wifiman"
 cask "zen"
 cask "zoom"
 
