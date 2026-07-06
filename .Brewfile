@@ -35,6 +35,7 @@ brew "fluxcd/tap/flux"
 
 cask "charles"
 cask "coconutbattery"
+cask "codex"
 cask "daisydisk"
 cask "discord"
 cask "docker-desktop"
