@@ -26,7 +26,6 @@ brew "sqlite"
 brew "vim"
 brew "watch"
 brew "webp"
-brew "wget"
 brew "yamllint"
 brew "ykman"
 brew "zig"
@@ -59,7 +58,6 @@ cask "transmission"
 cask "utm"
 cask "wifiman"
 cask "zen"
-cask "zoom"
 
 mas "Current", id: 6758530974
 mas "Developer", id: 640199960
